@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" href="cliente.css">
+</head>
+<body>
+
+    <main> <!-- para envolver todo o corpo da pagina-->
+        <h1>Lista de Clientes</h1> <!-- para titulo da pagina-->
+        <p>Aqui você pode ver a lista de todos os clientes.</p> <!-- o paragrafo para descricao do que a pagina faz.-->
+
+        <form id="form-cadastro"> <!-- para organizar em formato de formulario-->
+
+            <label for="input-nome">Nome</label> <!-- para a entrada de dados -->
+            <input type="text" id="input-nome"> <!-- para o campo de texto -->
+
+            <label for="input-email">Email</label>
+            <input type="email" id="input-email">
+
+            <label for="input-data">Data de Cadastro</label>
+            <input type="date" id="input-data">
+
+            <button type="submit">Adicionar Cliente</button> <!-- acho que podemos fazer as acoes atraves do js-->
+        <!-- para feed de erro ou sucesso direto pelo js-->
+
+        <!-- eventos seriam de event.listener-->
+
+        </form>
+
+        <div id="feedback">
+
+        </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Data de Cadastro</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-clientes">
+                    <!-- aqui seria onde os clientes cadastrados apareceriam, provavelmente usando js para manipular o DOM -->
+                    
+                </tbody>
+            </table>
+
+    </main>
+    <script src="cliente.js"></script>
+</body>
+</html>

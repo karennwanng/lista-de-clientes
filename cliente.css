@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root {
+    --fundo-da-pagina: #f5f7fa;
+    --fundo-tabela-form: #ffffff;
+    --cor-primaria: #2563eb;
+    --botao-excluir: #ef4444;
+    --cor-texto: #1e293b;
+}
+
+body {
+    background-color: var(--fundo-da-pagina);
+    color: var(--cor-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+form {
+    background: var(--fundo-tabela-form);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input {
+    padding: 0.6rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--cor-primaria);
+}
+
+button[type="submit"] {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+#feedback {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--fundo-tabela-form);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+tr:hover td {
+    background-color: #f8fafc;
+}
+
+.btn-excluir {
+    background-color: var(--botao-excluir);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-excluir:hover {
+    background-color: #dc2626;
+}
