@@ -1,4 +1,4 @@
-const URL_BASE = "https://crudcrud.com/api/155a40c08b6843eaa23fb516d5bec264/clientes";
+const URL_BASE = "https://crudcrud.com/api/f19f2e7b81fe4d72b0f7a0caa9e31dbb/clientes";
 
 const form = document.getElementById("form-cadastro");
 const inputNome = document.getElementById("input-nome");
