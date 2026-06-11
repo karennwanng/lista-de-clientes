@@ -1,4 +1,4 @@
-const URL_BASE = "https://crudcrud.com/api/f19f2e7b81fe4d72b0f7a0caa9e31dbb/clientes";
+const URL_BASE = "https://crudcrud.com/api/cb6006aa88e14a99a604c50e1df3c529/clientes";
 
 const form = document.getElementById("form-cadastro");
 const inputNome = document.getElementById("input-nome");
@@ -8,6 +8,7 @@ const listaClientes = document.getElementById("lista-clientes");
 const feedback = document.getElementById("feedback");
 
 async function buscarClientes(){
+    feedback.innerHTML = "Carregando..."
     const resposta = await fetch(URL_BASE);
     const clientes = await resposta.json();
     return clientes;
@@ -40,6 +41,14 @@ function renderizarLista(clientes){
         const nome = inputNome.value;
         const email = inputEmail.value;
         const data = inputData.value;
+        const clientesAtualizados = await buscarClientes()
+        const duplicado = clientesAtualizados.find(function(cliente){
+            return cliente.email === email
+        })
+        if (duplicado) {
+            feedback.innerHTML = "Cliente já tem cadastro!"
+            return;
+        }
         try {
             const resposta = await fetch(URL_BASE,{
             method: "POST",
